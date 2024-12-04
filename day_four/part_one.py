@@ -1,6 +1,9 @@
-import re
 import pandas as pd
 import numpy as np
+import time
+
+# Start the timer
+start_time = time.time()
 
 # Read the file into a DataFrame
 df = pd.read_csv('input.txt', header=None)
@@ -56,3 +59,7 @@ print(f"Total occurrences of '{word}': {total_matches}")
 # print("\nWord Search with Matches Highlighted:")
 # for row in result_grid:
 #     print("".join(row))
+
+end_time = time.time()
+runtime = (end_time - start_time) * 1_000_000
+print(f"Runtime: {runtime:.2f} microseconds")

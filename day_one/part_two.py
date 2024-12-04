@@ -1,5 +1,9 @@
 import pandas as pd
 import numpy as np
+import time
+
+# Start the timer
+start_time = time.time()
 
 # Read the space-delimited file
 df = pd.read_csv('input.txt', delim_whitespace=True, header=None, names=['Left', 'Right'])
@@ -22,4 +26,10 @@ for l in left:
         ans += l*right_dic[l]
 
 print(ans)
+
+end_time = time.time()
+
+# Calculate runtime in microseconds
+runtime_microseconds = (end_time - start_time) * 1_000_000
+print(f"Runtime: {runtime_microseconds:.2f} microseconds")
  

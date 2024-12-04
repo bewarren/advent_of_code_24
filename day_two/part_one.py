@@ -1,11 +1,14 @@
 import pandas as pd 
 import numpy as np
+import time
+
+# Start the timer
+start_time = time.time()
 
 df = pd.read_csv('input.txt', header=None)
 
 ans = 0
 for index, row in df.iterrows():
-    print(row.to_numpy()[0])
     int_list = list(map(int,row.to_numpy()[0].split()))
     n_row = np.array(int_list)
     
@@ -23,3 +26,7 @@ for index, row in df.iterrows():
     ans += 1
 
 print(ans)
+
+end_time = time.time()
+runtime = (end_time - start_time) * 1_000_000
+print(f"Runtime: {runtime:.2f} microseconds")

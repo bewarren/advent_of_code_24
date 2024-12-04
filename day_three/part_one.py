@@ -1,3 +1,7 @@
+import time
+
+# Start the timer
+start_time = time.time()
 
 with open('input.txt', 'r') as file:
     ans = 0
@@ -47,3 +51,7 @@ with open('input.txt', 'r') as file:
                 second_val = ""
 
     print(ans)
+    
+end_time = time.time()
+runtime = (end_time - start_time) * 1_000_000
+print(f"Runtime: {runtime:.2f} microseconds")
