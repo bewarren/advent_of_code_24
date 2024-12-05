@@ -81,6 +81,7 @@ for order in part2_lines:
         mid =  int(new_array[(len(new_array) - 1) // 2])
         ans += mid
 
+print(ans)
 
 end_time = time.time()
 runtime = (end_time - start_time) * 1_000_000
