@@ -1,5 +1,9 @@
 import pandas as pd
 import numpy as np
+import time
+
+# Start the timer
+start_time = time.time()
 
 df = pd.read_csv('input.txt', header=None)
 grid = df.to_numpy()
@@ -70,4 +74,6 @@ for character in antena_positions:
 print(len(unique_list))
                 
 
-
+end_time = time.time()
+runtime = (end_time - start_time) * 1_000_000
+print(f"Runtime: {runtime:.2f} microseconds")
