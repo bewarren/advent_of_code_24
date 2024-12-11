@@ -51,3 +51,9 @@ for i, val in enumerate(output):
         break
 
 print(ans)
+
+end_time = time.time()
+
+# Calculate runtime
+runtime = (end_time - start_time) * 1_000_000
+print(f"Runtime: {runtime:.2f} microseconds")

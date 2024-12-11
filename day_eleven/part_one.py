@@ -1,3 +1,7 @@
+import time
+
+# Start the timer
+start_time = time.time()
 
 input = [0, 7, 198844, 5687836, 58, 2478 ,25475,894]
 
@@ -19,3 +23,9 @@ for i in range(25):
    input = new_input
 
 print(len(input))
+
+end_time = time.time()
+
+# Calculate runtime
+runtime = (end_time - start_time) * 1_000_000
+print(f"Runtime: {runtime:.2f} microseconds")
