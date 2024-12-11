@@ -2,6 +2,10 @@
 
 import sys
 from typing import List
+import time
+
+# Start the timer
+start_time = time.time()
 
 FILE = sys.argv[1] if len(sys.argv) > 1 else "input.txt"
 
@@ -92,5 +96,10 @@ def part_two():
     print(f"Part 2: {answer}")
 
 
-part_one()
 part_two()
+
+end_time = time.time()
+
+# Calculate runtime
+runtime = (end_time - start_time) * 1_000_000
+print(f"Runtime: {runtime:.2f} microseconds")
